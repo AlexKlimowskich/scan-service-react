@@ -1,0 +1,129 @@
+@import "src/stylesheets/layout/module";
+@import "src/stylesheets/typography/module";
+
+
+.TariffCard {
+  display: grid;
+  grid-template-rows: 150px 2fr;
+  //flex-direction: column;
+  padding: 0;
+  border-width: 2px;
+  border-radius: 10px;
+  background: #FFF;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.20);
+  overflow: hidden;
+}
+
+.TariffCard__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  //min-height: 80px;
+}
+
+.TariffCard__header__title {
+  @include inter-500;
+  font-size: 30px;
+  letter-spacing: 0.3px;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.TariffCard__icon {
+  height: 80px;
+  width: auto;
+}
+
+.TariffCard__text {
+  //color: var(--mainBlack, #000000);
+  @include inter-400;
+  font-size: 18px;
+}
+
+.TariffCard__body {
+  display: grid;
+  position: relative;
+  grid-template-rows: 1fr 1fr 100px;
+  padding: 20px;
+  //gap: 50px;
+}
+
+.TariffCard__body__priceWrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+
+.TariffCard__body__price {
+  color: var(--mainBlack, #000000);
+  font-family: Inter, sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.3px;
+}
+
+.TariffCard__body__oldPrice {
+  color: var(--mainBlack, #000000);
+  font-family: Inter, sans-serif;
+  opacity: 0.4;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.25px;
+  text-decoration: line-through;
+}
+
+.featureHeader {
+  @include inter-500;
+  font-size: 20px;
+  color: var(--mainBlack, #000000);
+}
+
+.featureList {
+  @include inter-400;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+  gap: 6px;
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  li::before {
+    display: inline-block;
+    content: " ";
+    width: 18px;
+    height: 18px;
+    background-image: url("img/png/mark.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+.TariffCard__footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.CurrentBadge {
+  padding: 3px 12px;
+  z-index: 10;
+  font-size: 14px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 10px;
+  background: #3BA5E0;
+  color: #FFFFFF;
+}

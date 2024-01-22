@@ -1,0 +1,122 @@
+@import "src/stylesheets/layout/module";
+@import "src/stylesheets/typography/module";
+
+.Search {
+  @include container;
+  padding: 40px 20px;
+}
+
+.Search__header {
+  @include d-flex;
+  position: relative;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.header__text__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__text {
+  @include text-regular;
+  max-width: 450px;
+}
+
+.Document {
+  position: absolute;
+  top: 55px;
+  left: 75%;
+  width: 70px;
+  height: auto;
+}
+
+.Search__body {
+  margin-top: 50px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 5fr 300px;
+}
+
+.Search__card {
+  padding: 30px;
+  border-radius: 10px;
+  background: #FFF;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.20);
+}
+
+.Search__card__body {
+  display: grid;
+  grid-column-gap: 40px;
+  grid-template-columns: 1fr 2fr;
+}
+
+.Search__card__footer {
+  padding-top: 20px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.checkbox__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.Folders {
+}
+
+.Rocket {
+  width: 100%;
+  height: auto;
+}
+
+.Button__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-left: auto;
+}
+
+@media (max-width: 996px) {
+  .Document {
+    position: static;
+  }
+
+  .Folders {
+    display: none;
+  }
+
+  .Search__body {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .Search {
+    padding: 30px 8px;
+  }
+
+  .Search__card__body {
+    grid-template-columns: 1fr;
+  }
+
+  .Search__card__footer {
+    grid-template-columns: 1fr;
+  }
+  .Button__wrapper {
+    width: 100%;
+  }
+
+  .checkbox__wrapper {
+    display: none;
+  }
+}
